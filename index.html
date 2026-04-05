@@ -301,30 +301,21 @@
         .product-card {
             background: var(--white);
             border-radius: 16px;
-            overflow: hidden;
             border: 1px solid var(--border-gray);
             transition: all 0.3s ease;
+            padding: 2rem;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.02);
         }
 
         .product-card:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px -10px rgba(0,0,0,0.08);
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px -10px rgba(0,0,0,0.08);
+            border-color: #bfdbfe;
         }
 
-        .product-image {
-            width: 100%;
-            height: 220px;
-            background: linear-gradient(135deg, #f1f5f9 0%, #e2e8f0 100%);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            color: #64748b;
-            font-weight: 600;
-            border-bottom: 1px solid var(--border-gray);
-        }
-
-        .product-info {
-            padding: 1.8rem;
+        .product-info h4 {
+            font-size: 1.25rem;
+            margin-bottom: 0.8rem;
         }
 
         /* Contact Section */
@@ -458,7 +449,7 @@
             .map-container { height: 200px; }
         }
     </style>
-  
+    
 </head>
 <body>
 
@@ -584,28 +575,24 @@
 
             <div class="product-grid">
                 <div class="product-card">
-                    <div class="product-image">Upload Bosch Image Here</div>
                     <div class="product-info">
                         <h4>Bosch Equipment & Tools</h4>
                         <p>Heavy-duty power tools, drills, grinders, and cutting machinery.</p>
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">Upload PPE Image Here</div>
                     <div class="product-info">
                         <h4>Safety & PPE Gear</h4>
                         <p>High-grade industrial gloves, safety helmets, boots, and hi-vis vests.</p>
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">Upload Roofing Image Here</div>
                     <div class="product-info">
                         <h4>Roofing Sheets & Steel</h4>
                         <p>Premium GC roofing sheets, TMT bars, and structural steel.</p>
                     </div>
                 </div>
                 <div class="product-card">
-                    <div class="product-image">Upload Hardware Image Here</div>
                     <div class="product-info">
                         <h4>General Hardware</h4>
                         <p>Fasteners, plumbing fixtures, electrical cables, and consumables.</p>
@@ -662,7 +649,7 @@
 
             </div>
 
-<div class="contact-form">
+            <div class="contact-form">
                 <h4 style="margin-bottom: 1.5rem; font-size: 1.2rem;">Quick Inquiry</h4>
                 
                 <form id="submit-to-google-sheet">
@@ -706,9 +693,10 @@
             <h3>FulFilUs</h3>
             <p style="color: #cbd5e1; margin-bottom: 1rem;">Industrial Procurement & Building Materials</p>
             <p style="color: #64748b; font-size: 0.9rem;"><em>The digital evolution of Sri Sai Enterprises — 20 Years of Trust.</em></p>
-            <p style="margin-top: 3rem; font-size: 0.85rem; color: #334155;">&copy; 2026 FulFilUs. All rights reserved. Hyderabad, Telangana.</p>
+            <p style="margin-top: 3rem; font-size: 0.85rem; color: #334155;">© 2026 FulFilUs. All rights reserved. Hyderabad, Telangana.</p>
         </div>
     </footer>
+    
   <script>
   // 1. PASTE YOUR GOOGLE SCRIPT WEB APP URL HERE
   const scriptURL = 'https://script.google.com/macros/s/AKfycbwbfRxV6STKIyP6C2v0HukeCLdHg2C2uMUtRAims_GQN73BPT40lOP-5LW3k88dxfWi/exec'; 
