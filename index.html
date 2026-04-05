@@ -22,7 +22,7 @@
             --primary-dark: #0f172a;
             --accent-blue: #2563eb;
             --deep-blue: #1e40af;
-            --soft-blue: #eff6ff; /* Light professional blue */
+            --soft-blue: #eff6ff; 
             --bg-light: #f8fafc;
             --text-main: #1e293b;
             --text-muted: #475569;
@@ -34,15 +34,15 @@
         html { scroll-behavior: smooth; }
         
         body { 
-            background-color: var(--soft-blue); /* Base blue background */
+            background-color: var(--soft-blue); 
             color: var(--text-main); 
             overflow-x: hidden;
-            /* Sharper, more visible Tech Grid */
+            /* Visible Tech Grid */
             background-image: radial-gradient(rgba(37, 99, 235, 0.2) 1.5px, transparent 1.5px);
             background-size: 32px 32px; 
         }
 
-        /* Powerful Background Blobs */
+        /* Pulsing Background Decorations */
         .blob {
             position: fixed;
             width: 900px;
@@ -89,7 +89,7 @@
         .sidebar-links a { color: #94a3b8; text-decoration: none; font-size: 1.2rem; font-weight: 600; transition: 0.3s; }
         .sidebar-links a:hover { color: var(--white); padding-left: 12px; }
 
-        /* Floating Nav Buttons */
+        /* Navigation Buttons */
         .menu-btn {
             position: fixed; top: 1.5rem; left: 1.5rem; z-index: 2100;
             background: var(--white); border: 2px solid var(--accent-blue);
@@ -103,7 +103,7 @@
         }
         .top-nav .btn { pointer-events: auto; }
 
-        /* HERO SECTION - Strong Blue Visibility */
+        /* Hero Section - High Visibility */
         .hero {
             height: 100vh;
             display: flex; align-items: center; padding: 0 10%;
@@ -120,22 +120,20 @@
         .section-tag { color: var(--accent-blue); text-transform: uppercase; letter-spacing: 4px; font-weight: 800; font-size: 0.9rem; margin-bottom: 1.5rem; display: block; }
         .section-title { font-size: 3rem; margin-bottom: 4rem; color: var(--primary-dark); }
         
-        /* Alternating Section Colors */
         #workflow { background-color: var(--white); }
         #products { background-color: var(--soft-blue); }
-        #about { background-color: transparent; }
 
-        /* Fancy Visible Cards */
+        /* Visible Cards */
         .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; }
         .wf-card {
             background: var(--white);
             padding: 3.5rem 2.5rem; border-radius: 35px; border: 1px solid rgba(37, 99, 235, 0.1);
-            box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.08); transition: 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.08); transition: 0.4s;
         }
-        .wf-card:hover { transform: translateY(-15px); border-color: var(--accent-blue); box-shadow: 0 35px 60px -10px rgba(37, 99, 235, 0.15); }
+        .wf-card:hover { transform: translateY(-15px); border-color: var(--accent-blue); }
         .wf-num { font-size: 4rem; font-weight: 800; color: rgba(37, 99, 235, 0.15); margin-bottom: 1rem; line-height: 1; }
 
-        /* Contact Section - Deep Professional Blue */
+        /* Contact Section */
         .contact-container {
             display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem;
             background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
@@ -148,7 +146,6 @@
             width: 100%; background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15);
             padding: 1.2rem; border-radius: 20px; color: var(--white); font-size: 1rem;
         }
-        .input-group input:focus { border-color: var(--accent-blue); outline: none; background: rgba(255,255,255,0.1); }
 
         .btn {
             display: inline-block; padding: 1.2rem 2.8rem;
@@ -167,16 +164,13 @@
             background: #25d366; color: white; width: 70px; height: 70px;
             border-radius: 24px; display: flex; align-items: center; justify-content: center;
             box-shadow: 0 20px 40px rgba(37, 211, 102, 0.4); z-index: 1000;
-            transition: 0.3s;
         }
-        .fab-whatsapp:hover { transform: scale(1.1) rotate(8deg); }
 
         @media (max-width: 900px) {
             .hero { padding-top: 140px; height: auto; padding-bottom: 80px; }
             .hero h1 { font-size: 3.2rem; }
             section { padding: 6rem 5%; }
             .contact-container { grid-template-columns: 1fr; padding: 3rem 2rem; border-radius: 40px; }
-            .section-title { font-size: 2.4rem; }
         }
     </style>
 </head>
@@ -215,12 +209,12 @@
 
     <section class="hero">
         <div class="hero-content">
-            <span class="section-tag">Trusted Since </span>
+            <span class="section-tag">Industrial Grade</span>
             <h1>Fulfillment, <span>Delivered.</span></h1>
             <p>Your single-window digital bridge for industrial sourcing and site logistics in Hyderabad. Stop vendor-hunting; start building.</p>
             <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
                 <a href="#contact" class="btn">Send Requirement</a>
-                <a href="#workflow" class="btn" style="background: var(--white); color: var(--accent-blue); border: 2px solid var(--accent-blue); box-shadow: none;">See How it Works</a>
+                <a href="#workflow" class="btn" style="background: var(--white); color: var(--accent-blue); border: 2px solid var(--accent-blue); box-shadow: none;">How it Works</a>
             </div>
         </div>
     </section>
@@ -239,23 +233,23 @@
         <div class="grid-4">
             <div class="wf-card">
                 <div class="wf-num">01</div>
-                <h3 style="margin-bottom: 1rem;">One Touch</h3>
-                <p style="color: var(--text-muted); line-height: 1.6;">WhatsApp your BOQ or even a photo of a handwritten list. No portals, no apps.</p>
+                <h3>One Touch</h3>
+                <p style="color: var(--text-muted);">WhatsApp your BOQ or even a photo of a handwritten list. No portals, no apps.</p>
             </div>
             <div class="wf-card">
                 <div class="wf-num">02</div>
-                <h3 style="margin-bottom: 1rem;">Rapid Quoting</h3>
-                <p style="color: var(--text-muted); line-height: 1.6;">Our engine fetches real-time market rates and sends a quote back in under 60 mins.</p>
+                <h3>Rapid Quoting</h3>
+                <p style="color: var(--text-muted);">Our engine fetches real-time market rates and sends a quote back in under 60 mins.</p>
             </div>
             <div class="wf-card">
                 <div class="wf-num">03</div>
-                <h3 style="margin-bottom: 1rem;">Vetted Sourcing</h3>
-                <p style="color: var(--text-muted); line-height: 1.6;">We source only from verified partners with rigorous quality checks at the gate.</p>
+                <h3>Vetted Sourcing</h3>
+                <p style="color: var(--text-muted);">We source only from verified partners with rigorous quality checks at the gate.</p>
             </div>
             <div class="wf-card">
                 <div class="wf-num">04</div>
-                <h3 style="margin-bottom: 1rem;">Compliant Logistics</h3>
-                <p style="color: var(--text-muted); line-height: 1.6;">Prompt site delivery with flawless GST invoicing and digital proof-of-delivery.</p>
+                <h3>Compliant Logistics</h3>
+                <p style="color: var(--text-muted);">Prompt site delivery with flawless GST invoicing and digital proof-of-delivery.</p>
             </div>
         </div>
     </section>
@@ -281,7 +275,7 @@
                     <p style="color: rgba(255,255,255,0.5); font-size: 1.2rem;">orders@fulfilus.com</p>
                 </div>
                 <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m13!1zMTfCsDIzJzMxLjAiTiA3OMKwMjInMTguMCJF!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaeba2d7%3A0xd05de2abc9e245c0!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1712314567890!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                    <iframe src="http://googleusercontent.com/maps.google.com/8" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
                 </div>
             </div>
             <div style="background: rgba(255,255,255,0.04); padding: 3.5rem; border-radius: 40px; border: 1px solid rgba(255,255,255,0.1);">
@@ -308,7 +302,7 @@
     <footer>
         <div class="container" style="text-align: center; padding: 5rem 0;">
             <h3 style="margin-bottom: 1.5rem; font-size: 2rem;">FulFilUs</h3>
-            <p style="font-size: 1rem; color: var(--text-muted);">Serving Hyderabad’s infrastructure since . Legacy of Sri Sai Enterprises.</p>
+            <p style="font-size: 1rem; color: var(--text-muted);">Serving Hyderabad’s infrastructure for over 20 years. Legacy of Sri Sai Enterprises.</p>
             <p style="margin-top: 3rem; font-size: 0.8rem; color: #94a3b8;">© 2026 FulFilUs. All rights reserved.</p>
         </div>
     </footer>
@@ -320,13 +314,11 @@
     </a>
 
     <script>
-        // Left Slider Control
         function toggleMenu() {
             document.getElementById('sidebar').classList.toggle('active');
             document.getElementById('overlay').classList.toggle('active');
         }
 
-        // Form Bridge to Google Sheet
         const scriptURL = 'https://script.google.com/macros/s/AKfycbwbfRxV6STKIyP6C2v0HukeCLdHg2C2uMUtRAims_GQN73BPT40lOP-5LW3k88dxfWi/exec'; 
         const form = document.forms['submit-to-google-sheet'];
         const submitBtn = document.getElementById('submit-btn');
