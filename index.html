@@ -6,11 +6,11 @@
     <title>FulFilUs - Industrial Procurement & Building Materials</title>
     
     <meta name="title" content="FulFilUs - Industrial Procurement & Building Materials">
-    <meta name="description" content="The digital evolution of Sri Sai Enterprises. Get data-backed quotes in 60 minutes for Bosch tools and construction materials.">
+    <meta name="description" content="The digital evolution of Sri Sai Enterprises. We provide frictionless industrial sourcing, 60-minute quoting, and reliable site delivery across Hyderabad.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://fulfilus.com/">
     <meta property="og:title" content="FulFilUs | Fulfillment, Delivered.">
-    <meta property="og:description" content="20 years of trust meets modern speed. 60-minute quoting on WhatsApp.">
+    <meta property="og:description" content="20 years of industrial expertise meets modern tech. Get quotes in 60 minutes for Bosch tools and construction materials via WhatsApp.">
     <meta property="og:image" content="https://fulfilus.com/preview-image.jpg">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -37,7 +37,7 @@
             background-color: var(--soft-blue); 
             color: var(--text-main); 
             overflow-x: hidden;
-            /* Visible Tech Grid */
+            /* High-Visibility Tech Grid */
             background-image: radial-gradient(rgba(37, 99, 235, 0.2) 1.5px, transparent 1.5px);
             background-size: 32px 32px; 
         }
@@ -45,12 +45,9 @@
         /* Pulsing Background Decorations */
         .blob {
             position: fixed;
-            width: 900px;
-            height: 900px;
+            width: 900px; height: 900px;
             background: radial-gradient(circle, rgba(37, 99, 235, 0.2) 0%, rgba(255,255,255,0) 70%);
-            border-radius: 50%;
-            z-index: -1;
-            filter: blur(100px);
+            border-radius: 50%; z-index: -1; filter: blur(100px);
             animation: move 15s infinite alternate;
         }
         @keyframes move {
@@ -60,26 +57,16 @@
 
         /* Left Sidebar Slider */
         #sidebar {
-            position: fixed;
-            left: calc(-1 * var(--sidebar-width));
-            top: 0;
-            width: var(--sidebar-width);
-            height: 100%;
-            background: var(--primary-dark);
-            z-index: 2000;
-            transition: left 0.4s cubic-bezier(0.77, 0, 0.175, 1);
-            padding: 3rem 2rem;
-            display: flex;
-            flex-direction: column;
-            color: var(--white);
+            position: fixed; left: calc(-1 * var(--sidebar-width)); top: 0;
+            width: var(--sidebar-width); height: 100%; background: var(--primary-dark);
+            z-index: 2000; transition: left 0.4s cubic-bezier(0.77, 0, 0.175, 1);
+            padding: 3rem 2rem; display: flex; flex-direction: column; color: var(--white);
             box-shadow: 10px 0 30px rgba(0,0,0,0.2);
         }
         #sidebar.active { left: 0; }
         .menu-overlay {
-            position: fixed;
-            top: 0; left: 0; width: 100%; height: 100%;
-            background: rgba(15, 23, 42, 0.6);
-            display: none; z-index: 1500; backdrop-filter: blur(8px);
+            position: fixed; top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(15, 23, 42, 0.6); display: none; z-index: 1500; backdrop-filter: blur(8px);
         }
         .menu-overlay.active { display: block; }
         .sidebar-logo { font-size: 1.8rem; font-weight: 800; margin-bottom: 3rem; color: var(--white); text-decoration: none; }
@@ -103,10 +90,9 @@
         }
         .top-nav .btn { pointer-events: auto; }
 
-        /* Hero Section - High Visibility */
+        /* Hero Section */
         .hero {
-            height: 100vh;
-            display: flex; align-items: center; padding: 0 10%;
+            height: 100vh; display: flex; align-items: center; padding: 0 10%;
             background: linear-gradient(135deg, #dbeafe 0%, #ffffff 60%, #eff6ff 100%);
             border-bottom: 1px solid rgba(37, 99, 235, 0.1);
         }
@@ -115,30 +101,30 @@
         .hero h1 span { color: var(--accent-blue); }
         .hero p { font-size: 1.4rem; color: var(--text-muted); margin-bottom: 3rem; max-width: 650px; font-weight: 500; }
 
-        /* Generic Section Styling */
+        /* Description Box */
+        .description-box {
+            background: var(--white); padding: 4rem; border-radius: 40px;
+            box-shadow: 0 20px 40px rgba(37, 99, 235, 0.05); border: 1px solid rgba(37, 99, 235, 0.1);
+            margin-top: -5rem; position: relative; z-index: 10;
+        }
+
         section { padding: 8rem 10%; position: relative; }
         .section-tag { color: var(--accent-blue); text-transform: uppercase; letter-spacing: 4px; font-weight: 800; font-size: 0.9rem; margin-bottom: 1.5rem; display: block; }
         .section-title { font-size: 3rem; margin-bottom: 4rem; color: var(--primary-dark); }
         
-        #workflow { background-color: var(--white); }
-        #products { background-color: var(--soft-blue); }
-
-        /* Visible Cards */
         .grid-4 { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 2.5rem; }
         .wf-card {
-            background: var(--white);
-            padding: 3.5rem 2.5rem; border-radius: 35px; border: 1px solid rgba(37, 99, 235, 0.1);
+            background: var(--white); padding: 3.5rem 2.5rem; border-radius: 35px; border: 1px solid rgba(37, 99, 235, 0.1);
             box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.08); transition: 0.4s;
         }
         .wf-card:hover { transform: translateY(-15px); border-color: var(--accent-blue); }
         .wf-num { font-size: 4rem; font-weight: 800; color: rgba(37, 99, 235, 0.15); margin-bottom: 1rem; line-height: 1; }
 
-        /* Contact Section */
+        /* Contact Container */
         .contact-container {
             display: grid; grid-template-columns: 1fr 1.2fr; gap: 5rem;
             background: linear-gradient(135deg, #0f172a 0%, #1e40af 100%);
             color: var(--white); padding: 5rem; border-radius: 50px;
-            box-shadow: 0 40px 80px -20px rgba(15, 23, 42, 0.4);
         }
         .input-group { margin-bottom: 2rem; }
         .input-group label { display: block; margin-bottom: 0.8rem; color: rgba(255,255,255,0.6); font-weight: 600; }
@@ -154,11 +140,11 @@
             border: none; cursor: pointer; transition: 0.3s;
             box-shadow: 0 15px 30px rgba(37, 99, 235, 0.3);
         }
-        .btn:hover { background: #3b82f6; transform: translateY(-4px); box-shadow: 0 20px 40px rgba(37, 99, 235, 0.5); }
+        .btn:hover { background: #3b82f6; transform: translateY(-4px); }
 
-        .map-container { border-radius: 30px; overflow: hidden; height: 280px; margin-top: 2rem; border: 4px solid rgba(255,255,255,0.1); }
+        /* Map Fix - Sized Correctly */
+        .map-container { border-radius: 30px; overflow: hidden; height: 300px; margin-top: 2rem; border: 4px solid rgba(255,255,255,0.1); }
 
-        /* Floating WhatsApp */
         .fab-whatsapp {
             position: fixed; bottom: 2.5rem; right: 2.5rem;
             background: #25d366; color: white; width: 70px; height: 70px;
@@ -169,6 +155,7 @@
         @media (max-width: 900px) {
             .hero { padding-top: 140px; height: auto; padding-bottom: 80px; }
             .hero h1 { font-size: 3.2rem; }
+            .description-box { padding: 2.5rem; margin-top: 0; border-radius: 30px; }
             section { padding: 6rem 5%; }
             .contact-container { grid-template-columns: 1fr; padding: 3rem 2rem; border-radius: 40px; }
         }
@@ -177,7 +164,7 @@
 <body>
 
     <div class="blob" style="top: -200px; left: -200px;"></div>
-    <div class="blob" style="bottom: -100px; right: -100px; background: radial-gradient(circle, rgba(37, 99, 235, 0.15) 0%, rgba(255,255,255,0) 70%);"></div>
+    <div class="blob" style="bottom: -100px; right: -100px;"></div>
 
     <div class="menu-btn" onclick="toggleMenu()">
         <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="3">
@@ -193,28 +180,41 @@
         <ul class="sidebar-links">
             <li><a href="#about" onclick="toggleMenu()">The Legacy</a></li>
             <li><a href="#workflow" onclick="toggleMenu()">Our Process</a></li>
-            <li><a href="#products" onclick="toggleMenu()">Material Categories</a></li>
+            <li><a href="#products" onclick="toggleMenu()">Categories</a></li>
             <li><a href="#contact" onclick="toggleMenu()">Get a Quote</a></li>
         </ul>
         <div style="margin-top: auto; border-top: 1px solid rgba(255,255,255,0.1); padding-top: 2rem;">
-            <p style="font-size: 0.8rem; color: #64748b; line-height: 1.6;">
-                THE DIGITAL EVOLUTION OF<br>SRI SAI ENTERPRISES.<br>HYDERABAD, INDIA.
-            </p>
+            <p style="font-size: 0.8rem; color: #64748b; line-height: 1.6;">SRI SAI ENTERPRISES EVOLVED.<br>HYDERABAD, TS.</p>
         </div>
     </nav>
 
     <div class="top-nav">
-        <a href="https://wa.me/919849461283" class="btn" style="padding: 0.9rem 1.8rem; font-size: 0.95rem; border-radius: 14px;">WhatsApp Quote</a>
+        <a href="https://wa.me/919849461283" class="btn" style="padding: 0.9rem 1.8rem; font-size: 0.95rem;">WhatsApp Quote</a>
     </div>
 
     <section class="hero">
         <div class="hero-content">
             <span class="section-tag">Industrial Grade</span>
             <h1>Fulfillment, <span>Delivered.</span></h1>
-            <p>Your single-window digital bridge for industrial sourcing and site logistics in Hyderabad. Stop vendor-hunting; start building.</p>
+            <p>Your single-window digital bridge for industrial sourcing and site logistics in Hyderabad. We bridge the gap between requirements and reality.</p>
             <div style="display: flex; gap: 1.5rem; flex-wrap: wrap;">
                 <a href="#contact" class="btn">Send Requirement</a>
-                <a href="#workflow" class="btn" style="background: var(--white); color: var(--accent-blue); border: 2px solid var(--accent-blue); box-shadow: none;">How it Works</a>
+                <a href="#workflow" class="btn" style="background: var(--white); color: var(--accent-blue); border: 2.5px solid var(--accent-blue); box-shadow: none;">How it Works</a>
+            </div>
+        </div>
+    </section>
+
+    <section style="padding-top: 0;">
+        <div class="container">
+            <div class="description-box">
+                <span class="section-tag">Who We Are</span>
+                <h2 style="font-size: 2.5rem; margin-bottom: 1.5rem; color: var(--primary-dark); font-weight: 800;">The Backbone of Hyderabad's Projects.</h2>
+                <p style="font-size: 1.25rem; color: var(--text-muted); line-height: 1.8; margin-bottom: 1.5rem; font-weight: 500;">
+                    FulFilUs is your project's silent partner. Born from over 20 years of industrial expertise, we eliminate the friction in sourcing materials for construction, manufacturing, and infrastructure. 
+                </p>
+                <p style="font-size: 1.25rem; color: var(--text-muted); line-height: 1.8; font-weight: 500;">
+                    We leverage vetted vendor networks and a digital backend to provide <strong>transparent pricing, quality verification, and real-time site logistics</strong>. From Bosch machinery to essential consumables, we fulfill your site's needs within 60 minutes.
+                </p>
             </div>
         </div>
     </section>
@@ -223,33 +223,33 @@
         <span class="section-tag">Our Roots</span>
         <h2 class="section-title">20 Years of Hard-Earned Trust.</h2>
         <p style="max-width: 900px; font-size: 1.5rem; color: var(--text-muted); line-height: 1.8; font-weight: 500;">
-            FulFilUs is the digital evolution of <span style="color: var(--primary-dark); font-weight: 800;">Sri Sai Enterprises</span>. We’ve powered Hyderabad’s skyline for two decades. Now, we’re merging that experience with technology to deliver 60-minute quotes and transparent site tracking.
+            We’ve powered Hyderabad’s skyline since 2006 through Sri Sai Enterprises. Today, we merge that on-the-ground experience with technology to deliver speed and transparency to every site in the city.
         </p>
     </section>
 
-    <section id="workflow">
+    <section id="workflow" style="background: var(--white);">
         <span class="section-tag">Performance</span>
         <h2 class="section-title">The Zero-Friction Process.</h2>
         <div class="grid-4">
             <div class="wf-card">
                 <div class="wf-num">01</div>
                 <h3>One Touch</h3>
-                <p style="color: var(--text-muted);">WhatsApp your BOQ or even a photo of a handwritten list. No portals, no apps.</p>
+                <p style="color: var(--text-muted);">WhatsApp your BOQ or even a photo of a handwritten list. No portals needed.</p>
             </div>
             <div class="wf-card">
                 <div class="wf-num">02</div>
-                <h3>Rapid Quoting</h3>
-                <p style="color: var(--text-muted);">Our engine fetches real-time market rates and sends a quote back in under 60 mins.</p>
+                <h3>Rapid Quote</h3>
+                <p style="color: var(--text-muted);">Receive a data-backed market rate quote delivered in under 60 minutes.</p>
             </div>
             <div class="wf-card">
                 <div class="wf-num">03</div>
-                <h3>Vetted Sourcing</h3>
-                <p style="color: var(--text-muted);">We source only from verified partners with rigorous quality checks at the gate.</p>
+                <h3>Vetted Quality</h3>
+                <p style="color: var(--text-muted);">Sourcing from verified partners with rigorous quality checks at the gate.</p>
             </div>
             <div class="wf-card">
                 <div class="wf-num">04</div>
-                <h3>Compliant Logistics</h3>
-                <p style="color: var(--text-muted);">Prompt site delivery with flawless GST invoicing and digital proof-of-delivery.</p>
+                <h3>Site Delivery</h3>
+                <p style="color: var(--text-muted);">Prompt delivery with digital tracking and flawless GST invoicing.</p>
             </div>
         </div>
     </section>
@@ -259,9 +259,9 @@
         <h2 class="section-title">If You Need It, We Source It.</h2>
         <div class="grid-4">
             <div class="wf-card"><h3>Bosch Power Tools</h3><p style="margin-top: 1rem; color: var(--text-muted);">Industrial drills, grinders, and heavy-duty machinery.</p></div>
-            <div class="wf-card"><h3>Safety & PPE</h3><p style="margin-top: 1rem; color: var(--text-muted);">Certified site helmets, high-grade gloves, and safety boots.</p></div>
-            <div class="wf-card"><h3>Steel & Roofing</h3><p style="margin-top: 1rem; color: var(--text-muted);">Premium GC sheets, TMT bars, and structural steel components.</p></div>
-            <div class="wf-card"><h3>General Hardware</h3><p style="margin-top: 1rem; color: var(--text-muted);">Electrical cables, plumbing fixtures, and site consumables.</p></div>
+            <div class="wf-card"><h3>Safety & PPE Gear</h3><p style="margin-top: 1rem; color: var(--text-muted);">Certified helmets, high-grade gloves, and site-wear.</p></div>
+            <div class="wf-card"><h3>Steel & Roofing</h3><p style="margin-top: 1rem; color: var(--text-muted);">Premium GC sheets, TMT bars, and structural steel.</p></div>
+            <div class="wf-card"><h3>General Hardware</h3><p style="margin-top: 1rem; color: var(--text-muted);">Cabling, fasteners, and daily site consumables.</p></div>
         </div>
     </section>
 
@@ -271,14 +271,14 @@
                 <span class="section-tag" style="color: rgba(255,255,255,0.4);">Partner with us</span>
                 <h2 style="font-size: 4rem; margin-bottom: 2rem; line-height: 1;">Ready to build?</h2>
                 <div style="margin-bottom: 3rem;">
-                    <p style="font-weight: 800; font-size: 1.8rem;">+91 98494 61283</p>
-                    <p style="color: rgba(255,255,255,0.5); font-size: 1.2rem;">orders@fulfilus.com</p>
+                    <p style="font-weight: 800; font-size: 2rem;">+91 98494 61283</p>
+                    <p style="color: rgba(255,255,255,0.5); font-size: 1.3rem;">orders@fulfilus.com</p>
                 </div>
                 <div class="map-container">
-                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d475.57911988965907!2d78.37157996001525!3d17.525026061531396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8db2b4d735b5%3A0x283b92137b494c74!2sFulFilUs%20-%20Industrial%20Procurement!5e0!3m2!1sen!2sin!4v1775378004049!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d243647.3160407057!2d78.26795908151522!3d17.412299801659755!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78392bafbc2!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1712310000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                 </div>
             </div>
-            <div style="background: rgba(255,255,255,0.04); padding: 3.5rem; border-radius: 40px; border: 1px solid rgba(255,255,255,0.1);">
+            <div style="background: rgba(255,255,255,0.04); padding: 3.5rem; border-radius: 40px; border: 1px solid rgba(255,255,255,0.15);">
                 <form id="submit-to-google-sheet">
                     <div class="input-group">
                         <label>Your Name</label>
@@ -289,26 +289,26 @@
                         <input type="tel" name="Phone" required placeholder="+91 00000 00000">
                     </div>
                     <div class="input-group">
-                        <label>BOQ / Material Requirements</label>
-                        <textarea name="Message" rows="6" required placeholder="E.g. 100 pairs gloves, 5 Bosch GWS 600..."></textarea>
+                        <label>Material Requirements</label>
+                        <textarea name="Message" rows="6" required placeholder="What materials do you need sourced today?"></textarea>
                     </div>
-                    <button type="submit" id="submit-btn" class="btn" style="width: 100%;">Submit Inquiry</button>
-                    <div id="success-msg" style="display:none; color: #25d366; margin-top: 1.5rem; font-weight: bold; text-align: center; background: rgba(37, 211, 102, 0.15); padding: 1.2rem; border-radius: 20px;">Sent! A quote will follow on WhatsApp shortly.</div>
+                    <button type="submit" id="submit-btn" class="btn" style="width: 100%;">Submit Requirement</button>
+                    <div id="success-msg" style="display:none; color: #25d366; margin-top: 1.5rem; font-weight: 800; text-align: center; background: rgba(37, 211, 102, 0.15); padding: 1.2rem; border-radius: 20px;">Success! We'll reply on WhatsApp shortly.</div>
                 </form>
             </div>
         </div>
     </section>
 
     <footer>
-        <div class="container" style="text-align: center; padding: 5rem 0;">
-            <h3 style="margin-bottom: 1.5rem; font-size: 2rem;">FulFilUs</h3>
-            <p style="font-size: 1rem; color: var(--text-muted);">Serving Hyderabad’s infrastructure for over 20 years. Legacy of Sri Sai Enterprises.</p>
-            <p style="margin-top: 3rem; font-size: 0.8rem; color: #94a3b8;">© 2026 FulFilUs. All rights reserved.</p>
+        <div class="container" style="text-align: center; padding: 5rem 0; border-top: 1px solid rgba(37, 99, 235, 0.1);">
+            <h3 style="margin-bottom: 1.5rem; font-size: 2.2rem; font-weight: 800;">FulFilUs</h3>
+            <p style="font-size: 1.1rem; color: var(--text-muted); font-weight: 600;">The digital evolution of Sri Sai Enterprises. Serving Hyderabad for 20 years.</p>
+            <p style="margin-top: 3rem; font-size: 0.9rem; color: #94a3b8; font-weight: 600;">© 2026 FulFilUs. All rights reserved.</p>
         </div>
     </footer>
 
     <a href="https://wa.me/919849461283" class="fab-whatsapp" target="_blank">
-        <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
+        <svg width="38" height="38" viewBox="0 0 24 24" fill="none" stroke="white" stroke-width="2.5">
             <path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"></path>
         </svg>
     </a>
@@ -326,17 +326,16 @@
 
         form.addEventListener('submit', e => {
             e.preventDefault();
-            submitBtn.innerText = "Processing Lead..."; 
+            submitBtn.innerText = "Processing..."; 
             fetch(scriptURL, { method: 'POST', body: new FormData(form)})
               .then(response => {
                 submitBtn.innerText = "Submit Inquiry"; 
                 successMsg.style.display = "block"; 
                 form.reset(); 
-                setTimeout(() => { successMsg.style.display = "none"; }, 7000); 
+                setTimeout(() => { successMsg.style.display = "none"; }, 8000); 
               })
               .catch(error => { 
                 submitBtn.innerText = "Try Again"; 
-                alert("Submission failed. Please check your connection.");
               });
         });
     </script>
