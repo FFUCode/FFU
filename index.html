@@ -29,7 +29,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* Color Palette */
         :root {
             --primary-dark: #0f172a;
             --accent-blue: #2563eb;
@@ -47,9 +46,17 @@
             letter-spacing: -0.02em;
         }
 
-        p {
-            color: var(--text-gray);
-            font-size: 1.1rem;
+        /* Fancy Glassmorphism Header */
+        header {
+            background-color: rgba(255, 255, 255, 0.8);
+            backdrop-filter: blur(15px); /* This creates the frosted glass look */
+            -webkit-backdrop-filter: blur(15px);
+            border-bottom: 1px solid rgba(226, 232, 240, 0.5);
+            padding: 0.8rem 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            transition: all 0.3s ease;
         }
 
         .container {
@@ -58,54 +65,27 @@
             padding: 0 1.5rem;
         }
 
-        /* Navigation */
-        header {
-            background-color: rgba(255, 255, 255, 0.98);
-            backdrop-filter: blur(10px);
-            border-bottom: 1px solid var(--border-gray);
-            padding: 1rem 0;
-            position: sticky;
-            top: 0;
-            z-index: 100;
-        }
-
         .nav-content {
             display: flex;
             justify-content: space-between;
             align-items: center;
         }
 
-        .logo-container {
-            display: flex;
-            flex-direction: column;
-        }
-
         .logo {
             display: flex;
             align-items: center;
-            font-size: 1.6rem;
+            font-size: 1.5rem;
             font-weight: 800;
             color: var(--primary-dark);
             text-decoration: none;
             letter-spacing: -1px;
         }
 
-        .logo svg {
-            margin-right: 8px;
-            color: var(--accent-blue);
-        }
-
-        .tagline {
-            font-size: 0.7rem;
-            color: #64748b;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
+        .logo svg { margin-right: 8px; color: var(--accent-blue); }
 
         .nav-links {
             display: flex;
-            gap: 1.5rem;
+            gap: 2rem;
             list-style: none;
         }
 
@@ -114,11 +94,66 @@
             color: var(--primary-dark);
             font-weight: 600;
             font-size: 0.9rem;
-            transition: color 0.2s ease;
+            position: relative;
+            transition: color 0.3s ease;
         }
 
-        .nav-links a:hover {
-            color: var(--accent-blue);
+        /* Fancy Underline Hover Effect */
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -4px;
+            left: 0;
+            background-color: var(--accent-blue);
+            transition: width 0.3s ease;
+        }
+
+        .nav-links a:hover::after { width: 100%; }
+
+        /* Fancy Hero Slider Section */
+        .hero-slider {
+            position: relative;
+            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
+            color: var(--white);
+            height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            overflow: hidden;
+        }
+
+        .slide {
+            position: absolute;
+            width: 100%;
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease-in-out;
+            padding: 0 1.5rem;
+            pointer-events: none;
+        }
+
+        .slide.active {
+            opacity: 1;
+            transform: translateY(0);
+            pointer-events: auto;
+        }
+
+        .hero-slider h1 {
+            font-size: 3.5rem;
+            color: var(--white);
+            margin-bottom: 1rem;
+        }
+
+        .hero-slider h1 span { color: #60a5fa; }
+
+        .hero-slider p {
+            color: #94a3b8;
+            max-width: 700px;
+            margin: 0 auto 2rem auto;
+            font-size: 1.2rem;
         }
 
         /* Buttons */
@@ -126,12 +161,11 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
-            padding: 0.75rem 1.25rem;
+            padding: 0.85rem 1.75rem;
             border-radius: 50px;
             text-decoration: none;
             font-weight: 600;
-            transition: all 0.3s ease;
-            text-align: center;
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
             gap: 8px;
             cursor: pointer;
             border: none;
@@ -140,40 +174,16 @@
         .btn-whatsapp {
             background-color: var(--whatsapp-green);
             color: var(--white);
-            font-size: 0.85rem;
+            box-shadow: 0 10px 20px -10px rgba(37, 211, 102, 0.5);
         }
 
-        .btn-primary {
-            background-color: var(--accent-blue);
-            color: var(--white);
-            width: 100%;
-        }
+        .btn-whatsapp:hover { transform: translateY(-3px); box-shadow: 0 15px 25px -10px rgba(37, 211, 102, 0.6); }
 
-        /* Hero Section */
-        .hero {
-            padding: 6rem 0;
-            background: linear-gradient(135deg, #0f172a 0%, #1e1b4b 100%);
-            color: var(--white);
-            text-align: center;
-        }
+        .btn-primary { background-color: var(--accent-blue); color: var(--white); width: 100%; }
 
-        .hero h1 {
-            font-size: 3.5rem;
-            color: var(--white);
-            margin-bottom: 1.5rem;
-        }
-
-        .hero h1 span { color: #60a5fa; }
-
-        .hero p {
-            color: #94a3b8;
-            max-width: 800px;
-            margin: 0 auto 2rem auto;
-        }
-
-        /* Sections */
+        /* General Sections */
+        section { padding: 6rem 0; }
         .section-header { text-align: center; margin-bottom: 4rem; }
-        .about, .workflow, .products, .contact { padding: 5rem 0; }
         .workflow, .contact { background-color: #f8fafc; }
         
         .grid-4, .product-grid {
@@ -184,40 +194,31 @@
 
         .card, .product-card {
             background: var(--white);
-            padding: 2rem;
-            border-radius: 16px;
+            padding: 2.5rem 2rem;
+            border-radius: 20px;
             border: 1px solid var(--border-gray);
-            transition: 0.3s ease;
+            transition: all 0.3s ease;
         }
 
         .card:hover, .product-card:hover {
-            transform: translateY(-5px);
+            transform: translateY(-10px);
             border-color: var(--accent-blue);
+            box-shadow: 0 20px 40px -20px rgba(0,0,0,0.1);
         }
 
-        /* Contact Details & Form */
+        /* Contact & Map */
         .contact-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4rem; }
-        .contact-item { display: flex; align-items: center; margin-bottom: 1.2rem; gap: 1rem; }
-        .contact-icon { width: 40px; height: 40px; background: var(--accent-light); color: var(--accent-blue); border-radius: 50%; display: flex; align-items: center; justify-content: center; }
-        
-        .map-container { margin-top: 2rem; border-radius: 12px; overflow: hidden; height: 250px; border: 1px solid var(--border-gray); }
-        .map-container iframe { width: 100%; height: 100%; }
+        .map-container { margin-top: 2rem; border-radius: 20px; overflow: hidden; height: 300px; border: 1px solid var(--border-gray); }
+        .contact-form { background: var(--white); padding: 3rem; border-radius: 24px; border: 1px solid var(--border-gray); box-shadow: 0 10px 30px rgba(0,0,0,0.02); }
 
-        .contact-form { background: var(--white); padding: 2.5rem; border-radius: 16px; border: 1px solid var(--border-gray); }
-        .form-group { margin-bottom: 1.2rem; }
-        .form-group label { display: block; margin-bottom: 0.4rem; font-weight: 600; font-size: 0.85rem; }
-        .form-group input, .form-group textarea { width: 100%; padding: 0.75rem; border: 1px solid var(--border-gray); border-radius: 8px; }
+        footer { background-color: var(--primary-dark); color: #94a3b8; padding: 4rem 0; text-align: center; }
 
-        footer { background-color: var(--primary-dark); color: #94a3b8; padding: 3rem 0; text-align: center; }
-
-        /* MOBILE MENU & RESPONSIVENESS */
+        /* Mobile Adjustments */
         @media (max-width: 900px) {
-            .nav-content { flex-direction: column; gap: 1rem; }
-            .nav-links { gap: 1rem; padding: 0.5rem 0; border-top: 1px solid var(--border-gray); border-bottom: 1px solid var(--border-gray); width: 100%; justify-content: center; }
-            .nav-links a { font-size: 0.8rem; }
-            .btn-whatsapp { width: 100%; }
+            .nav-links { display: none; }
+            .hero-slider h1 { font-size: 2.2rem; }
             .contact-grid { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 2.5rem; }
+            .nav-content { flex-direction: row; justify-content: space-between; }
         }
     </style>
 </head>
@@ -225,17 +226,14 @@
 
     <header>
         <div class="container nav-content">
-            <div class="logo-container">
-                <a href="#" class="logo">
-                    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
-                        <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
-                        <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
-                        <line x1="12" y1="22.08" x2="12" y2="12"></line>
-                    </svg>
-                    FulFilUs
-                </a>
-                <span class="tagline">Procurement Without Friction</span>
-            </div>
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+                    <path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path>
+                    <polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline>
+                    <line x1="12" y1="22.08" x2="12" y2="12"></line>
+                </svg>
+                FulFilUs
+            </a>
             
             <ul class="nav-links">
                 <li><a href="#about">About</a></li>
@@ -250,20 +248,29 @@
         </div>
     </header>
 
-    <section class="hero">
-        <div class="container">
+    <section class="hero-slider">
+        <div class="slide active" id="slide1">
             <h1>Fulfillment, <span>Delivered.</span></h1>
-            <p>The name FulFilus is a promise of partnership: we fulfill your requirements, together. One window for all sourcing and logistics.</p>
-            <a href="https://wa.me/919849461283?text=Hi%20FulFilUs,%20I%20have%20a%20material%20requirement." target="_blank" class="btn btn-whatsapp" style="padding: 1rem 2rem; font-size: 1rem;">
-                Get a 60-Minute Quote
-            </a>
+            <p>One window for all your industrial sourcing and logistics. We handle the friction, you handle the construction.</p>
+            <a href="#contact" class="btn btn-whatsapp" style="padding: 1rem 2.5rem; font-size: 1.1rem;">Get Started</a>
+        </div>
+        <div class="slide" id="slide2">
+            <h1>60-Minute <span>Quoting.</span></h1>
+            <p>Stop waiting days for pricing. Send your BOQ on WhatsApp and get a data-backed quote in under an hour.</p>
+            <a href="https://wa.me/919849461283" target="_blank" class="btn btn-whatsapp" style="padding: 1rem 2.5rem; font-size: 1.1rem;">Request Quote</a>
+        </div>
+        <div class="slide" id="slide3">
+            <h1>20 Years of <span>Trust.</span></h1>
+            <p>The digital evolution of Sri Sai Enterprises. Combining decades of experience with modern speed.</p>
+            <a href="#about" class="btn btn-whatsapp" style="padding: 1rem 2.5rem; font-size: 1.1rem;">Our Story</a>
         </div>
     </section>
 
     <section id="about" class="about">
         <div class="container">
-            <h3>A Legacy of Trust. A Future of Speed.</h3>
-            <p>FulFilUs is the digital evolution of <strong>Sri Sai Enterprises</strong>. For over 20 years, we have supplied Hyderabad’s industrial sites with reliability and integrity.</p>
+            <h4 style="color: var(--accent-blue); text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; margin-bottom: 1rem;">The Legacy</h4>
+            <h3>Building Hyderabad Since 2006.</h3>
+            <p style="margin-top: 1.5rem; font-size: 1.2rem; color: var(--text-gray);">FulFilUs is the digital evolution of <strong>Sri Sai Enterprises</strong>. For over 20 years, we have supplied Hyderabad’s industrial sites with reliability and integrity. We aren't just a platform; we are your project partners.</p>
         </div>
     </section>
 
@@ -271,22 +278,22 @@
         <div class="container">
             <div class="section-header"><h2>The Workflow</h2></div>
             <div class="grid-4">
-                <div class="card"><h4>01. One-Touch</h4><p>Send BOQ to WhatsApp.</p></div>
-                <div class="card"><h4>02. Rapid Quote</h4><p>Get pricing in 60 mins.</p></div>
-                <div class="card"><h4>03. Execution</h4><p>We source and track.</p></div>
-                <div class="card"><h4>04. Delivery</h4><p>Flawless documentation.</p></div>
+                <div class="card"><h4>01. One-Touch</h4><p>Send your BOQ or material list directly to our WhatsApp.</p></div>
+                <div class="card"><h4>02. Rapid Quote</h4><p>Receive a competitive, data-backed quote within 60 mins.</p></div>
+                <div class="card"><h4>03. Execution</h4><p>We source from vetted suppliers and track every movement.</p></div>
+                <div class="card"><h4>04. Delivery</h4><p>Material arrives with perfect GST invoices at your site.</p></div>
             </div>
         </div>
     </section>
 
     <section id="products" class="products">
         <div class="container">
-            <div class="section-header"><h2>Supply Categories</h2></div>
+            <div class="section-header"><h2>Our Specialties</h2></div>
             <div class="product-grid">
-                <div class="product-card"><h4>Bosch Tools</h4><p>Drills, grinders, and more.</p></div>
-                <div class="product-card"><h4>Safety Gear</h4><p>Gloves, helmets, boots.</p></div>
-                <div class="product-card"><h4>Steel & Sheets</h4><p>Roofing and structural steel.</p></div>
-                <div class="product-card"><h4>Hardware</h4><p>Fasteners and consumables.</p></div>
+                <div class="product-card"><h4>Bosch Tools</h4><p>Industrial power tools, grinders, and drilling equipment.</p></div>
+                <div class="product-card"><h4>Safety Gear</h4><p>Premium gloves, helmets, and protective site clothing.</p></div>
+                <div class="product-card"><h4>Steel & Sheets</h4><p>High-grade roofing sheets and structural TMT steel.</p></div>
+                <div class="product-card"><h4>General Hardware</h4><p>Essential fasteners, electricals, and site consumables.</p></div>
             </div>
         </div>
     </section>
@@ -294,20 +301,21 @@
     <section id="contact" class="contact">
         <div class="container contact-grid">
             <div class="contact-info">
-                <h3>Contact Us</h3>
-                <div class="contact-item"><div class="contact-icon">📞</div><p>+91 98494 61283</p></div>
-                <div class="contact-item"><div class="contact-icon">✉️</div><p>orders@fulfilus.com</p></div>
-                <div class="map-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d475.57911988965907!2d78.37157996001525!3d17.525026061531396!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb8db2b4d735b5%3A0x283b92137b494c74!2sFulFilUs%20-%20Industrial%20Procurement!5e0!3m2!1sen!2sin!4v1775378004049!5m2!1sen!2sin" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe></div>
+                <h3>Get in Touch</h3>
+                <p style="margin: 1.5rem 0 3rem 0;">Ready to eliminate procurement friction? Reach out now.</p>
+                <div class="contact-item"><div class="contact-icon">📞</div><div><strong>Phone</strong><p>+91 98494 61283</p></div></div>
+                <div class="contact-item"><div class="contact-icon">✉️</div><div><strong>Email</strong><p>orders@fulfilus.com</p></div></div>
+                <div class="map-container"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d121820.25418182282!2d78.3708!3d17.4123!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bcb99daeaebd2c7%3A0xae93b78322b79b0!2sHyderabad%2C%20Telangana!5e0!3m2!1sen!2sin!4v1712310000000!5m2!1sen!2sin" width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
             </div>
             <div class="contact-form">
                 <h4>Quick Inquiry</h4>
                 <form id="submit-to-google-sheet">
                     <div class="form-group"><label>Name</label><input type="text" name="Name" required></div>
                     <div class="form-group"><label>Phone</label><input type="tel" name="Phone" required></div>
-                    <div class="form-group"><label>Materials Needed</label><textarea name="Message" rows="3" required></textarea></div>
-                    <button type="submit" id="submit-btn" class="btn btn-primary">Send Request</button>
+                    <div class="form-group"><label>Requirements</label><textarea name="Message" rows="5" placeholder="E.g. 50 pairs industrial gloves, 2 Bosch grinders..." required></textarea></div>
+                    <button type="submit" id="submit-btn" class="btn btn-primary" style="padding: 1.2rem;">Send Request</button>
                 </form>
-                <div id="success-msg" style="display:none; color: #25d366; margin-top: 1rem; font-weight: bold;">Sent Successfully!</div>
+                <div id="success-msg" style="display:none; color: #25d366; margin-top: 1.5rem; font-weight: bold; text-align: center; background: #f0fdf4; padding: 1rem; border-radius: 12px;">Sent Successfully! We'll call you.</div>
             </div>
         </div>
     </section>
@@ -315,28 +323,41 @@
     <footer>
         <div class="container">
             <h3>FulFilUs</h3>
-            <p>© 2026 FulFilUs. Legacy of Sri Sai Enterprises. Hyderabad.</p>
+            <p>© 2026 FulFilUs. The digital evolution of Sri Sai Enterprises. Hyderabad, India.</p>
         </div>
     </footer>
 
     <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbwbfRxV6STKIyP6C2v0HukeCLdHg2C2uMUtRAims_GQN73BPT40lOP-5LW3k88dxfWi/exec'; 
-      const form = document.forms['submit-to-google-sheet'];
-      const submitBtn = document.getElementById('submit-btn');
-      const successMsg = document.getElementById('success-msg');
+        // Hero Slider Logic
+        let currentSlide = 0;
+        const slides = document.querySelectorAll('.slide');
+        
+        function showNextSlide() {
+            slides[currentSlide].classList.remove('active');
+            currentSlide = (currentSlide + 1) % slides.length;
+            slides[currentSlide].classList.add('active');
+        }
+        
+        setInterval(showNextSlide, 5000); // Changes slide every 5 seconds
 
-      form.addEventListener('submit', e => {
-        e.preventDefault();
-        submitBtn.innerText = "Sending..."; 
-        fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-          .then(response => {
-            submitBtn.innerText = "Send Request"; 
-            successMsg.style.display = "block"; 
-            form.reset(); 
-            setTimeout(() => { successMsg.style.display = "none"; }, 5000); 
-          })
-          .catch(error => { submitBtn.innerText = "Error. Try Again."; });
-      });
+        // Form Logic
+        const scriptURL = 'https://script.google.com/macros/s/AKfycbwbfRxV6STKIyP6C2v0HukeCLdHg2C2uMUtRAims_GQN73BPT40lOP-5LW3k88dxfWi/exec'; 
+        const form = document.forms['submit-to-google-sheet'];
+        const submitBtn = document.getElementById('submit-btn');
+        const successMsg = document.getElementById('success-msg');
+
+        form.addEventListener('submit', e => {
+            e.preventDefault();
+            submitBtn.innerText = "Sending..."; 
+            fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+              .then(response => {
+                submitBtn.innerText = "Send Request"; 
+                successMsg.style.display = "block"; 
+                form.reset(); 
+                setTimeout(() => { successMsg.style.display = "none"; }, 5000); 
+              })
+              .catch(error => { submitBtn.innerText = "Error. Try Again."; });
+        });
     </script>
 </body>
 </html>
